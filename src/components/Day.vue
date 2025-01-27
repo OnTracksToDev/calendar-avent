@@ -3,15 +3,11 @@ export default {
   props: {
     number: Number,
     content: String,
-  },
-  data() {
-    return {
-      isOpen: false,
-    };
+    isOpen: Boolean,
   },
   methods: {
     openDay() {
-      this.isOpen = true;
+      this.$emit("toggle-open");
     },
   },
 };
